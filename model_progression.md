@@ -8,7 +8,7 @@ Yield = BenchmarkRate + Spread
 where spread absorbs issuer and bond-specific credit differences.
 
 ## Benchmark construction
-A benchmark curve was loaded from treasury_curve_2023_05_15.csv, then smoothed with monotone cubic interpolation (PCHIP):
+A benchmark curve was loaded from treasury_curve[Confidential CSV], then smoothed with monotone cubic interpolation (PCHIP):
 
 B(T) = PCHIP(T)
 
