@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from scipy.interpolate import PchipInterpolator
 
-curve = pd.read_csv("treasury_curve_2023_05_15.csv")
+curve = pd.read_csv("CLASSIFIED")
 curve["years"] = pd.to_numeric(curve["years"], errors="coerce")
 curve["yield"] = pd.to_numeric(curve["yield"], errors="coerce")
 curve = curve.dropna().sort_values("years")
@@ -77,5 +77,5 @@ print("\n===== V10 MODEL REPORT =====")
 print("Mean abs error (bps):", df["AbsErrorBps"].mean())
 print("Median abs error (bps):", df["AbsErrorBps"].median())
 
-df.to_csv("v10_results.csv", index=False)
+df.to_csv("CLASSIFIED", index=False)
 print("\nSaved: v10_results.csv")
